@@ -1,6 +1,7 @@
 import Media from "../models/media.model.js";
 import cloudinary from "../config/cloudinaryConfig.js";
 
+// This function will get all media available
 export const getAllMedia = async (req, res) => {
   try {
     const media = await Media.find();
@@ -10,6 +11,8 @@ export const getAllMedia = async (req, res) => {
   }
 };
 
+
+// It will retrieve filtered media according to filter applied 
 export const getFilteredMedia = async (req, res) => {
   try {
     const { title, type } = req.query;
@@ -45,7 +48,7 @@ export const getFilteredMedia = async (req, res) => {
 
 
 
-
+// It will upload the media to cloudinary and DB.
 export const uploadMedia = async (req, res) => {
   try {
     if (!req.file) {
