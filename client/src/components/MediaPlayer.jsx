@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
-import clinikkLogo from "../../public/clinikk-logo.avif" 
+import clinikkLogo from "../../public/Clinikk-logo.avif" 
 
 const MediaPlayer = () => {
   const [mediaList, setMediaList] = useState([]);
@@ -13,7 +13,7 @@ const MediaPlayer = () => {
       if (searchQuery) params.title = searchQuery;
       if (mediaType) params.type = mediaType;
 
-      const response = await axios.get("http://localhost:3000/api/media/search", { params });
+      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/search`, { params });
       setMediaList(response.data);
     } catch (error) {
       console.error("Error fetching media:", error);

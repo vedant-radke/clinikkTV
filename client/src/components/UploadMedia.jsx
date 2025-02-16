@@ -32,7 +32,7 @@ const UploadMedia = () => {
     formData.append("description", description);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/media/upload", formData, {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
