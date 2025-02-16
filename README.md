@@ -1,5 +1,6 @@
 
 # ClinikkTV
+### Deployment - [https://clinikk-tv.vercel.app/](https://clinikk-tv.vercel.app/)
 ### Postman Documentation - [https://documenter.getpostman.com/view/34049028/2sAYXEFJNE](https://documenter.getpostman.com/view/34049028/2sAYXEFJNE)
 
 
